@@ -1,12 +1,7 @@
-import org.scalajs.dom.raw.{Text, Element}
+import org.scalajs.jquery.jQuery
 
 import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation.JSExport
-import org.scalajs.jquery.jQuery
-
-
-import org.scalajs.dom
-import dom.document
 
 object TestApp extends JSApp {
   @JSExport
