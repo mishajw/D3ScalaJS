@@ -2,6 +2,8 @@ import org.scalajs.dom.raw.{Text, Element}
 
 import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation.JSExport
+import org.scalajs.jquery.jQuery
+
 
 import org.scalajs.dom
 import dom.document
@@ -9,14 +11,11 @@ import dom.document
 object TestApp extends JSApp {
   @JSExport
   override def main(): Unit = {
-    showMessage("Hello, world!")
+    showMessage("Hello, jQuery!")
   }
 
   def showMessage(message: String) = {
-    val div: Element = document.createElement("div")
-    val text: Text = document.createTextNode(message)
-
-    div appendChild text
-    document.body appendChild div
+    jQuery("body")
+      .append(s"<div>$message<div>")
   }
 }
