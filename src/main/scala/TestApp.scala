@@ -3,6 +3,9 @@ import org.scalajs.jquery.jQuery
 import scala.scalajs.js.JSApp
 import scala.scalajs.js.annotation.JSExport
 
+import org.singlespaced.d3js.d3
+import org.singlespaced.d3js.Ops._
+
 object TestApp extends JSApp {
   @JSExport
   override def main(): Unit = {
@@ -14,6 +17,9 @@ object TestApp extends JSApp {
             .attr("id", "main-button")
             .click(() => showMessage("Pressed a button"))
       )
+
+    d3.select("#vis")
+        .append("svg")
   }
 
   def showMessage(message: String) = {
